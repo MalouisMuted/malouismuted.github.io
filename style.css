@@ -1,0 +1,136 @@
+.button {
+    cursor: pointer;
+}
+
+body {
+    background-color: rgba(73, 65, 44, 1);
+    color: #b0a18e;
+    font-family: "Tahoma";
+    font-size: 140%;
+    margin: 40px;
+}
+
+.container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.child {
+    transition-duration: 0.3s;
+    border-radius: 5px;
+    padding: 5px;
+    width: 200px;
+    height: 10rem;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    line-height: 150px;
+    font-weight: bold;
+    text-align: center;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.0, #262216), color-stop(1, #49412c));
+    background-image: -moz-linear-gradient(center bottom, #262216 0%, #49412c 100%);
+    padding: 2px;
+}
+
+.child:hover {
+    transition-duration: 0.3s;
+    width: 250px;
+}
+
+.wrapper {
+    display: grid;
+    margin: 1rem;
+    margin-bottom: 10rem;
+    grid-template-columns: 5rem 5rem auto;
+    grid-template-rows: auto auto;
+    grid-gap: 1rem;
+}
+
+.box {
+    background-color: #262216;
+    border-radius: 5px;
+    padding: 30px;
+}
+
+.box-anchor {
+    place-self: start stretch;
+    background-color: transparent;
+    font-size: 150%;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.box-header {
+    place-self: start stretch;
+    grid-column: 2 / 4;
+    grid-row: 1;
+}
+
+.box-link {
+    grid-column: 1 / 3;
+    grid-row: 2;
+}
+
+.box-paragraph {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+@media only screen and (max-width: 600px) {
+
+    body {
+        margin: 1rem;
+    }
+
+    .wrapper {
+        margin-bottom: 5rem;
+        grid-template-columns: 20vw 60vw;
+        grid-template-rows: auto 100px auto;
+    }
+
+    .box-anchor {
+        place-self: start stretch;
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .box-header {
+        place-self: start stretch;
+        grid-column: 1 / 3;
+        grid-row: 2;
+    }
+
+    .box-link {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .box-paragraph {
+        grid-column: 1 / 3;
+        grid-row: 3;
+    }
+}
+
+.welcome {
+    transition-duration: 0.3s;
+    font-size: 3em;
+    text-align: center;
+}
+
+.welcome:hover {
+    transition-duration: 0.3s;
+    -webkit-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    transform: scale(1.4);
+    letter-spacing: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #b0a18e;
+    font-weight: 900;
+}
