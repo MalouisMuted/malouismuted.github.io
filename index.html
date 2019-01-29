@@ -8,39 +8,29 @@
         <meta name="author" content="Aleksi Kuznetsov">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
         <link href="style.css" rel="stylesheet">
     </head>
     <body>
         <div id="app">
+		<a href="index.html">
+        My portfolio
+        </a>
             <ul>
-                <li v-for="item in projects">
-                    {{ item.name }}
-                    <a target="_blank" v-bind:href="item.link">Link to repository</a><br>
-                    {{ item.description }}
+                <li class="ui grid" v-for="item in projects">
+                    <p class="ten wide column">{{ item.name }}</p>
+                    <a class="six wide column" target="_blank" v-bind:href="item.link">Link to repository</a><br>
+					<p class="sixteen wide column">{{ item.description }}</p>
                 </li>
             </ul>
         </div>
-        <a href="index.html">
-        My portfolio
-        </a>
         <footer>
             <p &copy>&copy; Aleksi Kuznetsov</p>
             <p>Contact: <a href="mailto:someone@example.com">
                 aleksi.kuznetsov@gmail.com</a>
             </p>
         </footer>
-        <!-- development version, includes helpful console warnings -->
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-		
-		<script
-		src="https://code.jquery.com/jquery-3.1.1.min.js"
-		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-		crossorigin="anonymous"></script>
-		
-        <!--Semantic UI-->
-        <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
-		
         <script src="core.js"></script>
     </body>
 </html>
