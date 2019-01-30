@@ -3,7 +3,8 @@
 const app = new Vue({
     el: '#app',
     data: {
-        projects: []
+        projects: [],
+        dark_mode: false
     },
     mounted() {
         this.projects.push({
@@ -26,16 +27,27 @@ const app = new Vue({
             link: "https://gitlab.com/MalouisMuted/CSV_file_reader",
             description: "Program to find certain names and some data from them. Used pointers, linked lists and file I/O. Written with C."
         });
-		this.projects.push({
+        this.projects.push({
             name: "Run length encoding/decoding",
             link: "https://gitlab.com/MalouisMuted/run_length_encoding_decoding",
             description: "CLI-operable encoding and decoding for text files. Written with C."
         });
-		this.projects.push({
+        this.projects.push({
             name: "News API thingy majingy",
             link: "https://gitlab.com/MalouisMuted/www-harkka",
             description: "Done with Express.js. Uses Docker. Uses NewsAPI for fetching news articles. Vue.js is used for front end controlling."
         });
     },
-    methods: {}
+    methods: {
+        switch_lights: function() {
+            this.dark_mode = !this.dark_mode;
+            if (this.dark_mode) {
+                document.querySelector('body').classList.add('dark');
+                document.querySelector('body').classList.remove('light');
+            } else {
+                document.querySelector('body').classList.add('light');
+                document.querySelector('body').classList.remove('dark');
+            }
+        }
+    }
 })

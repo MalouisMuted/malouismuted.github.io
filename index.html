@@ -9,8 +9,11 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
         <link href="style.css" rel="stylesheet">
     </head>
-    <body>
+    <body class="dark">
         <div id="app">
+			<button v-on:click="switch_lights" class="ui secondary button">
+			Switch lights
+			</button>
             <div class="ui stackable grid">
                 <div class="eight wide tablet four wide computer column" v-for="item in projects">
                     <h1>{{ item.name }}</h1>

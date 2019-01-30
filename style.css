@@ -2,6 +2,16 @@ body {
 	margin: 10rem;
 }
 
+body.light {
+	background-color: white;
+	color: black;
+}
+
+body.dark {
+	background-color: black;
+	color: white;
+}
+
 .push-down {
 	padding-top: 3rem;
 }
