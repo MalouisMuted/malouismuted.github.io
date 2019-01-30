@@ -4,7 +4,7 @@ const app = new Vue({
     el: '#app',
     data: {
         projects: [],
-        dark_mode: false
+        dark_mode: true
     },
     mounted() {
         this.projects.push({
