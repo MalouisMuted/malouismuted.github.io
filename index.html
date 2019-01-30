@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,19 +11,22 @@
     </head>
     <body>
         <div id="app">
-		<a href="index.html">
-        My portfolio
-        </a>
-            <ul>
-                <li class="ui grid" v-for="item in projects">
-                    <p class="ten wide column">{{ item.name }}</p>
-                    <a class="six wide column" target="_blank" v-bind:href="item.link">Link to repository</a><br>
-					<p class="sixteen wide column">{{ item.description }}</p>
-                </li>
-            </ul>
+            <div class="ui stackable grid">
+                <div class="eight wide tablet four wide computer column" v-for="item in projects">
+                    <h1>{{ item.name }}</h1>
+					<a target="_blank" v-bind:href="item.link">
+						<button class="ui right labeled icon green button">
+							<i class="gitlab icon"></i>
+							Repository
+						</button>
+					</a>
+					<p class="push-down">{{ item.description }}</p>
+                </div>
+            </div>
         </div>
+		
         <footer>
-            <p &copy>&copy; Aleksi Kuznetsov</p>
+            <p>&copy; Aleksi Kuznetsov</p>
             <p>Contact: <a href="mailto:someone@example.com">
                 aleksi.kuznetsov@gmail.com</a>
             </p>

@@ -1,4 +1,6 @@
-var app = new Vue({
+"use strict";
+
+const app = new Vue({
     el: '#app',
     data: {
         projects: []
@@ -15,7 +17,7 @@ var app = new Vue({
             description: "Text based adventure game written with Java. Used lots of typical Java concepts such as hash mapping, inheritance and namespace emphasis, interfaces, arraylist manipulation."
         });
         this.projects.push({
-            name: "Timotei",
+            name: "Java smart post app",
             link: "https://gitlab.com/MalouisMuted/Timotei",
             description: "Post office application. Written with Java. Used XML-file reading libraries, GUI with JavaFX, Javascript API. Used with SQL-databases."
         });
@@ -23,6 +25,16 @@ var app = new Vue({
             name: "CSV file reader",
             link: "https://gitlab.com/MalouisMuted/CSV_file_reader",
             description: "Program to find certain names and some data from them. Used pointers, linked lists and file I/O. Written with C."
+        });
+		this.projects.push({
+            name: "Run length encoding/decoding",
+            link: "https://gitlab.com/MalouisMuted/run_length_encoding_decoding",
+            description: "CLI-operable encoding and decoding for text files. Written with C."
+        });
+		this.projects.push({
+            name: "News API thingy majingy",
+            link: "https://gitlab.com/MalouisMuted/www-harkka",
+            description: "Done with Express.js. Uses Docker. Uses NewsAPI for fetching news articles. Vue.js is used for front end controlling."
         });
     },
     methods: {}
