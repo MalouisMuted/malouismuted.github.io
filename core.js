@@ -35,7 +35,7 @@ const app = new Vue({
         this.projects.push({
             name: "News API thingy majingy",
             link: "https://gitlab.com/MalouisMuted/www-harkka",
-            description: "Done with Express.js. Uses Docker. Uses NewsAPI for fetching news articles. Vue.js is used for front end controlling."
+            description: "News collector. Done with Express.js. Uses Docker. Uses NewsAPI for fetching news articles. Vue.js is used for front end controlling."
         });
     },
     methods: {
